@@ -1,6 +1,5 @@
 package com.dispatcher;
 
-import com.Main;
 import com.actions.*;
 import com.components.TaskList;
 import com.errors.Error;
@@ -37,7 +36,10 @@ public class Dispatcher {
                 TaskList.getInstant().delete(commandRest[1]);
                 break;
             case "view":
-                Show.viewby(Main.getOut(),commandRest[1]);
+                Show.viewby(commandRest[1]);
+                break;
+            case "share":
+                Share.shareTask(commandRest[1]);
                 break;
             default:
                 Error.errorCommand(command);

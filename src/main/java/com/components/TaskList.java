@@ -9,7 +9,6 @@ public final class TaskList {
     private final static Map<String, List<Task>> tasks = new LinkedHashMap<>();
     private static TaskList taskList = new TaskList();
     private static long lastId = 0;
-    private Date theDate;
 
     public Map<String, List<Task>> getTasks() {
         return tasks;

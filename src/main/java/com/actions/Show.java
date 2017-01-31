@@ -5,7 +5,6 @@ import com.components.Task;
 import com.components.TaskList;
 import com.errors.Error;
 
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,7 +66,7 @@ public class Show {
          }
      }
 
-    public static void viewby(PrintWriter out, String commandLine) {
+    public static void viewby(String commandLine) {
         String[] subcommandRest = commandLine.split(" ", 2);
         switch (subcommandRest[1]){
             case "date":
@@ -78,7 +77,7 @@ public class Show {
                 Map<String, List<Task>> byDeadline = creatMap("deadline");
                 showByDate(byDeadline);
                 break;
-            case "project":
+            case "Project":
                 show();
                 break;
             default:
