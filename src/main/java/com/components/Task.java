@@ -10,12 +10,12 @@ import java.util.GregorianCalendar;
 public final class Task {
     private final long id;
     private final String description;
-    private final Date date;
-    private Date dateLimite = null;
+    private final Date addingDate;
+    private Date deadLine = null;
     private boolean done;
 
     public Date getDate() {
-        return date;
+        return addingDate;
     }
 
     public Task(long id, String description, boolean done) {
@@ -24,8 +24,8 @@ public final class Task {
         this.done = done;
         Calendar now = new GregorianCalendar();
         Date nowdate = now.getTime();
-        this.dateLimite = nowdate;
-        this.date = nowdate;
+        this.deadLine = nowdate;
+        this.addingDate = nowdate;
     }
 
     public long getId() {
@@ -33,7 +33,7 @@ public final class Task {
     }
 
     public void setDateLimite(Date dateLimite) {
-        this.dateLimite = dateLimite;
+        this.deadLine = dateLimite;
     }
 
     public String getDescription() {
@@ -48,6 +48,6 @@ public final class Task {
         this.done = done;
     }
     public Date getDateLimite() {
-        return dateLimite;
+        return deadLine;
     }
 }

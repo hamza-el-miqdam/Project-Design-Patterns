@@ -10,9 +10,11 @@ public class Help {
         Main.getOut().println("  add task <project name> <task description> ");
         Main.getOut().println("  check <task ID>");
         Main.getOut().println("  uncheck <task ID>");
-        Main.getOut().println("  deadline <task ID> <deadline format 26/01/2017>");
-        Main.getOut().println("  today <task ID>");
-        Main.getOut().println("  share <task ID> <Project name>");
+        Main.getOut().println("  delete <task ID>");
+        Main.getOut().println("  deadline <task ID> <deadline format 31/12/2017>");
+        Main.getOut().println("  today ");
+        Main.getOut().println("  share <task ID> <project name>");
+        Main.getOut().println("  view by <date deadline or project> ");
         Main.getOut().println();
     }
 }

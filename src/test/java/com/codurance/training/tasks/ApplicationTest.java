@@ -98,6 +98,8 @@ public final class ApplicationTest {
                 ""
         );
 
+
+
         execute("quit");
     }
 

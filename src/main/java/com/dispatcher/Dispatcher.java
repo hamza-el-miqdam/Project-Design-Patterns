@@ -1,7 +1,6 @@
 package com.dispatcher;
 
 import com.actions.*;
-import com.components.TaskList;
 import com.errors.Error;
 
 
@@ -15,7 +14,7 @@ public class Dispatcher {
                 Show.show();
                 break;
             case "add":
-                TaskList.getInstant().add(commandRest[1]);
+                Add.add(commandRest[1]);
                 break;
             case "check":
                 Check.check(commandRest[1]);
@@ -27,16 +26,16 @@ public class Dispatcher {
                 Help.help();
                 break;
             case "today":
-                TodayDeadline.todaydead();
+                Deadline.today();
                 break;
             case "deadline":
-                Deadline.deadline(commandRest[1]);
+                Deadline.setDeadline(commandRest[1]);
                 break;
             case "delete":
-                TaskList.getInstant().delete(commandRest[1]);
+                DeleteTask.delete(commandRest[1]);
                 break;
             case "view":
-                Show.viewby(commandRest[1]);
+                View.viewBy(commandRest[1]);
                 break;
             case "share":
                 Share.shareTask(commandRest[1]);
